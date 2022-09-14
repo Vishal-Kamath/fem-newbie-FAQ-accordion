@@ -20,6 +20,9 @@
   
   --dropdown-container-padding: 0 2.5rem;
   --dropdown-container-height: 30rem;
+
+  --fs-header: 3rem;
+  --fs-dropdown-container: 1.25rem;
 }
 
 * {
@@ -43,6 +46,7 @@ body {
 
   height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -52,7 +56,7 @@ body {
   height: var(--container-height);
 
   padding-bottom: 3rem;
-  margin-top: calc(50vh - (var(--container-height) / 2));
+  margin-top: calc(5rem + 50vh - (var(--container-height) / 2));
 
   flex-grow: 0;
   flex-shrink: 0;
@@ -63,23 +67,59 @@ body {
 
   border: 0;
   border-radius: 2.5rem;
+
+  filter: drop-shadow(0 3rem 1rem rgba(0 0 0 / 0.2));
 }
 
 .image-container {
   position: relative;
+  height: 100%;
 }
 .mobile img:nth-child(1){
   position: absolute;
   top: 0;
   transform: translate(0, -60%);
 }
+.box {
+  display: none;
+  position: absolute;
+  top: 42.5%;
+  left: 0;
+  transform: translate(-50%);
+}
+
+.box img {
+  filter: drop-shadow(0 1rem 2rem rgba(0 0 0 / 0.1)); 
+}
+
+.desktop {
+  display: none;
+  position: relative;
+  width: 40rem;
+  height: var(--container-height);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.desktop img:nth-child(1){
+  position: absolute;
+  left: 0;
+  transform: translate(-59.5%, -32%);
+}
+
+.desktop img:nth-child(2){
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-17%, -50%);
+}
 
 .content-container {
-  width: 100%;
+  width: min(100%, 52rem);
 }
 
 .header {
-  font-size: 3rem;
+  font-size: var(--fs-header);
   font-weight: var(--fw-bold);
   color: var(--clr-primary-dark-blue);
   text-align: center;
@@ -89,7 +129,7 @@ body {
 .dropdown-container {
   overflow: auto;
   padding: var(--dropdown-container-padding);
-  font-size: 1.25rem;
+  font-size: var(--fs-dropdown-container);
 
   height: var(--dropdown-container-height);
 }
@@ -121,6 +161,39 @@ body {
 .content {
   display: none;
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 65rem) {
+  :root {
+    --container-width: 92rem;
+    --container-height: 50rem;
+    
+    --dropdown-container-padding: 0 9.5rem;
+    --dropdown-container-height: 30rem;
+
+    --fs-header: 3.25rem;
+    --fs-dropdown-container: 1.4rem;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: calc(50vh - (var(--container-height) / 2));
+  }
+  .header {
+    padding: var(--dropdown-container-padding);
+    padding-bottom: 2rem;
+    text-align: start;
+  }
+  .desktop {
+    display: block;
+  }
+  .box {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
 }
 
 
