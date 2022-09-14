@@ -24,7 +24,7 @@
         <img src="images/bg-pattern-desktop.svg" alt="">
         <img src="images/illustration-woman-online-desktop.svg" alt="">
       </div>  
-      <div class="box">
+      <div class="box" id="box">
         <img src="images/illustration-box-desktop.svg" alt="">
       </div>   
       <div class="mobile">
@@ -32,65 +32,65 @@
         <img src="images/bg-pattern-mobile.svg" alt="">
       </div>
     </div>
-    <div class="content-container">
+    <div class="content-container" id="content-container">
       <div class="header">FAQ</div>
-      <div class="dropdown-container">
-        <div class="dropdown">
+      <div class="dropdown-container" id="dropdown-container">
+        <div class="dropdown" id="1">
           <div class="title-container">
             <div class="title">How many team members can I invite?</div>
-            <button class="dropdown-button">
+            <button class="dropdown-button" onclick="displayContent(1)">
               <img src="images/icon-arrow-down.svg" alt="">
             </button>
           </div>
-          <div class="content" id="content1">
+          <div class="content">
             You can invite up to 2 additional users on the Free plan. There is no limit on 
             team members for the Premium plan.
           </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown" id="2">
           <div class="title-container">
             <div class="title">What is the maximum file upload size?</div>
-            <button class="dropdown-button">
+            <button class="dropdown-button" onclick="displayContent(2)">
               <img src="images/icon-arrow-down.svg" alt="">
             </button>
           </div>
-          <div class="content" id="content2">
+          <div class="content">
             No more than 2GB. All files in your account 
             must fit your allotted storage space.
           </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown" id="3">
           <div class="title-container">
             <div class="title">How do I reset my password?</div>
-            <button class="dropdown-button">
+            <button class="dropdown-button" onclick="displayContent(3)">
               <img src="images/icon-arrow-down.svg" alt="">
             </button>
           </div>
-          <div class="content" id="content3">
+          <div class="content">
             Click “Forgot password” from the login page or “Change password” from your profile page.
             A reset link will be emailed to you.
           </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown" id="4">
           <div class="title-container">
             <div class="title">Can I cancel my subscription?</div>
-            <button class="dropdown-button">
+            <button class="dropdown-button" onclick="displayContent(4)">
               <img src="images/icon-arrow-down.svg" alt="">
             </button>
           </div>
-          <div class="content" id="content4">
+          <div class="content">
             Yes! Send us a message and we’ll process your 
             request no questions asked.
           </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown" id="5">
           <div class="title-container">
             <div class="title">Do you provide additional support?</div>
-            <button class="dropdown-button">
+            <button class="dropdown-button" onclick="displayContent(5)">
               <img src="images/icon-arrow-down.svg" alt="">
             </button>
           </div>
-          <div class="content" id="content5">
+          <div class="content">
             Chat and email support is available 24/7. Phone lines are open during normal business hours.
           </div>
         </div>
@@ -103,5 +103,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Vishal-Kamath" target="_blank">Vishal Kamath</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
